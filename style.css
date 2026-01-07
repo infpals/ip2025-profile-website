@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+:root 
+{
+    --base-color: #fe6565;
+    --text-color: #ffffff;
+    --primary-color: #0c4b9d;
+    --secondary-color: #f4f4f4;
+    --color-1: #333;
+    --color-2: #d02f27ed;
+    --color-3: #ea4722;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: Roboto,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color)
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: var(--text-color);
+    font-family: Geneva, cursive;
+}
+
+nav
+{
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul
+{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em
+}
+
+nav li:first-child
+{
+    margin-right: auto;
+    font-family: Geneva, cursive;
+}
+
+nav a 
+{
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+
+nav a:hover
+{
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+header, section
+{
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--base-color);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.flex-container
+{
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+} 
+
+header img
+{
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-container
+{
+    flex: 0 1 34em;
+}
+
+h1 
+{
+    font-size: 2.5rem;
+}
+
+.text-container p
+{
+    margin: .75em 0 1em 0;
+    font-size: 1.25rem;
+}
+
+.download-btn
+{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: .75em 1.5em;
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+.download-btn:hover
+{
+    background-color: var(--color-1);
+}
+
+section
+{
+    padding: 3em min(2em , 15%);
+    background-color: var(--primary-color);
+    text-align: start;
+}
+
+h2
+{
+    font-size: 2rem;
+}
+
+section p
+{
+    margin-top: 1em;
+    font-size: 1.25rem;
+}
+
