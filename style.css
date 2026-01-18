@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define variables that can be used throughout the project */
 :root 
 {
-    --base-color: #fe6565;
+    --header-colour: #fe6565;
+    --section-colour: #0c4b9d;
     --text-color: #ffffff;
-    --primary-color: #0c4b9d;
-    --secondary-color: #f4f4f4;
-    --color-1: #333;
-    --color-2: #d02f27ed;
-    --color-3: #ea4722;
+    --button-hover-colour: #333;
 }
 
+/* Styles that apply to all elements on the page */
 *
 {
     margin: 0;
@@ -18,21 +19,47 @@
     box-sizing: border-box;
 }
 
+/* Styles for the html element */
 html
 {
-    font-family: Roboto,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Poppins, Roboto;
     color: var(--text-color)
 }
 
-h1, h2, h3, h4, h5, h6
+
+/* Styles for headers since we are going to use them everywhere */
+h1, h2, h3
 {
+    font-family: Merriweather, cursive;
     color: var(--text-color);
-    font-family: Geneva, cursive;
 }
 
+h1 
+{
+    font-size: 2.5rem; /* rem means root em, relative to the root element's font size */
+}
+
+h2
+{
+    font-size: 2rem;
+}
+
+/* Styles for header and section elements, which are our "containers" */
+header, section
+{
+    /* Spacing around the element*/
+    margin: 2em auto; /* top/bottom left/right */
+    width: min(75em, 100%); 
+    background-color: var(--header-colour);
+    /* Spacing inside the element */
+    padding: min(2em, 15%); 
+    border-radius: 1em;
+}
+
+/* Styles for navigation bar */
 nav
 {
-    margin: 1em auto 3em auto;
+    margin: 1em auto 3em auto; /* top right bottom left */
     width: min(1000px, 100%);
 }
 
@@ -41,37 +68,27 @@ nav ul
     display: flex;
     align-items: center;
     list-style-type: none;
-    gap: 2em
+    gap: 2em;
 }
 
 nav li:first-child
 {
     margin-right: auto;
-    font-family: Geneva, cursive;
+    font-family: Merriweather, Geneva, cursive;
 }
 
 nav a 
 {
     text-decoration: none;
     color: var(--text-color);
-
 }
 
 nav a:hover
 {
-    text-decoration: underline;
-    color: var(--primary-color);
+    color: var(--section-colour);
 }
 
-header, section
-{
-    margin: 2em auto;
-    width: min(75em, 100%);
-    background-color: var(--base-color);
-    padding: min(2em, 15%);
-    border-radius: 1em;
-}
-
+/* Styles for the elements with class flex-container */
 .flex-container
 {
     display: flex;
@@ -81,22 +98,19 @@ header, section
     align-items: flex-start;
 } 
 
+/* Styles for the header image */
 header img
 {
     max-width: 100%;
     border-radius: 1em;
-    object-fit: cover;
-    object-position: center;
+    object-fit: cover; /* scales and crops the image to fit into the container */
+    object-position: center; /* centers the image within the container */
 }
 
+/* Styles for the elements with class text-container */
 .text-container
 {
-    flex: 0 1 34em;
-}
-
-h1 
-{
-    font-size: 2.5rem;
+    flex: 0 1 34em; /* flex-grow | flex-shrink | flex-basis */
 }
 
 .text-container p
@@ -105,37 +119,35 @@ h1
     font-size: 1.25rem;
 }
 
+/* Styles for download button */
 .download-btn
 {
     display: inline-block;
     text-decoration: none;
     color: var(--text-color);
-    background-color: var(--primary-color);
+    background-color: var(--section-colour);
     padding: .75em 1.5em;
     border-radius: .5em;
-    font-weight: 600;
 }
 
+/* Styles for download button hover state */
 .download-btn:hover
 {
-    background-color: var(--color-1);
+    background-color: var(--button-hover-colour);
 }
 
+/* Styles for section element */
 section
 {
     padding: 3em min(2em , 15%);
-    background-color: var(--primary-color);
-    text-align: start;
+    background-color: var(--section-colour);
 }
 
-h2
-{
-    font-size: 2rem;
-}
-
-section p
+section p 
 {
     margin-top: 1em;
     font-size: 1.25rem;
 }
+
+
 
