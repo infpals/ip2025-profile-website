@@ -88,19 +88,18 @@
         <h2>
           Projects
         </h2>
-        <div class = "text-container">
-          <h3>
-            Software Developing Project
-          </h3>
-          <p>
-            Teamed up with three other students in the Software Engineering and Professional Practice course to walk through the software development process using Java.   Led the team, set deadlines and distributed the work, which allowed the team to present high-quality work.        
-          </p>
-          <h3>
-            Data Science Project
-          </h3>
-          <p>
-            Incorporated data cleaning skills, data visualisation skills and Interaction Regression to the heat consumption of the Appleton Tower dataset and the temperature dataset to investigate if there is a difference in the heat consumption of the building during the regular years and the COVID-19 pandemic years. The result showed that there was an increase in the heat consumption of the building during the pandemic.    
-          </p>
+        <!-- Added by Jakub-->
+        <div id="projects-ui">
+          <div id="projects-filter-row">
+            <label for="techSelect">Filter by tech: </label>
+
+            <select id="techSelect" aria-label="Filter projects by technology"></select>
+
+            <button id="filterBtn" type="button" class="download-btn">Filter</button>
+            <button id="clearBtn" type="button" class="download-btn">Show all</button>
+          </div>
+
+          <ul id="projects-list"></ul>
         </div>
       </div>
     </section>
@@ -126,5 +125,6 @@
         </div>
       </div>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>
